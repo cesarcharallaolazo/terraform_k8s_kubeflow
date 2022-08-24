@@ -1,0 +1,1 @@
+./kustomize build deployments/vanilla | kubectl apply -f -
