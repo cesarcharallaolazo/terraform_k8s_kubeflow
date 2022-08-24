@@ -42,12 +42,12 @@ Soon, there will be instructions for other clouds (GCP, Azure).
 
 ### B. Install Kubeflow
 
-8.      cd kubeflow-manifests
-9.      sh install_kubeflow_on_k8s.sh
+9.      cd kubeflow-manifests
+10.      sh install_kubeflow_on_k8s.sh
 ![alt][kubeflow_installation]
 
-10. if fails, retry above step until it works
-11. verify all Pods are ready before trying to connect:
+11. if fails, retry above step until it works
+12. verify all Pods are ready before trying to connect:
 
         kubectl get pods -n cert-manager
         kubectl get pods -n istio-system
@@ -59,12 +59,12 @@ Soon, there will be instructions for other clouds (GCP, Azure).
         # Depending on your installation if you installed KServe
         kubectl get pods -n kserve
 
-12. to get started quickly, you can access Kubeflow via port-forward. Run the following to port-forward Istio’s Ingress-Gateway to local port 8080
+13. to get started quickly, you can access Kubeflow via port-forward. Run the following to port-forward Istio’s Ingress-Gateway to local port 8080
 
     kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
 
-13. now you can access the Kubeflow Central Dashboard at http://localhost:8080 (Dex login screen)
-14. login with the default user’s credential: 
+14. now you can access the Kubeflow Central Dashboard at http://localhost:8080 (Dex login screen)
+15. login with the default user’s credential: 
     - user: user@example.com
     - password: 12341234
 
@@ -72,7 +72,7 @@ Soon, there will be instructions for other clouds (GCP, Azure).
 
 ![alt][kubeflow_central_dashboard]
 
-15. if localhost:8080 is not reached, retry from step 9 until it works 
+16. if localhost:8080 is not reached, retry from step 10 until it works 
 
 ## Destroy All (Kubeflow + EKS Cluster)
 
